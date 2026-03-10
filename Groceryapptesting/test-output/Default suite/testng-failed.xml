@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testscript.Testcases">
+      <class name="testscript.ManageCategoryTestcase">
         <methods>
-          <include name="Logout"/>
           <include name="browserInitialization"/>
+          <include name="manageCategory"/>
         </methods>
-      </class> <!-- testscript.Testcases -->
+      </class> <!-- testscript.ManageCategoryTestcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

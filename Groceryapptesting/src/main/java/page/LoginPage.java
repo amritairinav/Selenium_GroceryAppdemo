@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 		@FindBy(name="password")WebElement password;
 		@FindBy(xpath="//button[@type='submit']")WebElement submit;
 		@FindBy(xpath="//label[@for='remember']")WebElement rememberme;
+		@FindBy(xpath="//p[text()='Dashboard']")WebElement dashboard;
 		
 		WebDriver driver;
 		public LoginPage(WebDriver driver) {
@@ -31,7 +32,10 @@ import org.openqa.selenium.support.PageFactory;
 		public void clicksignin() {
 			submit.click();
 		}
-
+		 public boolean isdashBoarddisplayed() {
+		        return dashboard.isDisplayed();
+			
+		 }
 }
 
 	
