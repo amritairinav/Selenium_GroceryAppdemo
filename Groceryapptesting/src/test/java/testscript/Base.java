@@ -1,13 +1,16 @@
 package testscript;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import Utility.Waitutility;
+import Utility.ScreenshotUtility;
 
 
 
@@ -23,9 +26,16 @@ public class Base {
 		driver.manage().window().maximize();
 	}
 
-		//@AfterMethod()
-	public void browserQuit() {
-		driver.quit();
+	
+	@AfterMethod
+	public void browserQuitAndClose(ITestResult iTestResult) throws IOException {
+	    // Take screenshot on failure
+	    if(iTestResult.getStatus() == ITestResult.FAILURE) {
+	        ScreenshotUtility screenshot = new ScreenshotUtility();
+	        screenshot.getScreenshot(driver, iTestResult.getName());
+	    	        driver.quit();
+	    }
+	
 	}
-
 }
+

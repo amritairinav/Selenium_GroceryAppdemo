@@ -23,6 +23,8 @@ public class AdminUserPage {
 	WebElement dropdown;
 	@FindBy(xpath = "//button[@name='Create']")
 	WebElement savebutton;
+	@FindBy(xpath = "//div[contains(@class,'alert-success')]")
+	WebElement alertmessage;
 
 	WebDriver driver;
 	Waitutility waitUtil;
@@ -52,12 +54,16 @@ public class AdminUserPage {
 		password.sendKeys(Password);
 	}
 
-	public void dropdown() {
+	public void dropdown(String Dropdown) {
 		PageUtility pu = new PageUtility();
-		pu.dropdownIndex(dropdown, 1);
+		pu.dropdownVisibleText(dropdown, Dropdown);
 	}
 
 	public void savebutton() {
 		savebutton.click();
 	}
+	 public boolean isalertdisplayed() {
+		 return alertmessage.isDisplayed();
+	 }
+	
 }
