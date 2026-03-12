@@ -7,8 +7,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import Utility.FileUpload;
-import Utility.Waitutility;
+import constant.Constant;
+import utility.FileUpload;
+import utility.Waitutility;
 
 public class ManageCategoryPage {
 
@@ -28,11 +29,10 @@ public class ManageCategoryPage {
 	WebElement alertmessage;
 
 	WebDriver driver;
-	Waitutility waitUtil;
+	
 
 	public ManageCategoryPage(WebDriver driver) {
 		this.driver = driver;
-		this.waitUtil = new Waitutility();
 		PageFactory.initElements(driver, this);
 	}
 
@@ -40,7 +40,7 @@ public class ManageCategoryPage {
 		moreinfo.click();
 	}
 
-	public void newbutton() {
+	public void newButton() {
 		newbutton.click();
 	}
 
@@ -57,19 +57,18 @@ public class ManageCategoryPage {
 	public void uploadAdminImage() {
 
 		FileUpload upload = new FileUpload();
-		String filepath = "C:\\Users\\Anvith\\Desktop\\JavaExcel\\image1.JPG";
-		upload.uploadFile(uploadimage, filepath);
+		upload.uploadFile(uploadimage,Constant.IMAGEFILE);
 	}
 	
-	 public void savebutton() {
-		 waitUtil.waitForElementTobeVisible(driver,savebutton);
+	 public void saveButton() {
+		 Waitutility waitUtil=new Waitutility();
 	     waitUtil.waitForElementToBeClickable(driver,savebutton);
 		 Actions action = new Actions(driver);
 		 action.moveToElement(savebutton).perform();
          savebutton.click();
 	       	    }
 
-	 public boolean isalertdisplayed() {
+	 public boolean isalertDisplayed() {
 		 return alertmessage.isDisplayed();
 	 }
 	

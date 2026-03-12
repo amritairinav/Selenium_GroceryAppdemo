@@ -5,24 +5,25 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Utility.CommonLogin;
-import Utility.ExcelUtility;
-import Utility.FakerUtility;
 import page.AdminUserPage;
+import utility.CommonLogin;
+import utility.ExcelUtility;
+
 
 public class AdminUserTestCase extends Base {
-	@Test
+	@Test (description="Verify if the user is able to add and save admin user details")
 	public void addAdminuserInfo() throws IOException {
-		String username1 = ExcelUtility.getStringdata(1, 0,"LoginPage");
-		String password1 = ExcelUtility.getStringdata(1, 1,"LoginPage");
-		new CommonLogin(driver,username1,password1);
+		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
+		String password = ExcelUtility.getStringdata(1, 1, "LoginPage");
+		CommonLogin login = new CommonLogin();
+		login.login(driver, username, password);
 		AdminUserPage adminuser=new AdminUserPage(driver);
         adminuser.moreinfo();
         adminuser.newbutton();
-        String username2 = ExcelUtility.getStringdata(1, 0,"AdminPage");
-		String password2 = ExcelUtility.getStringdata(1, 1,"AdminPage");
-        adminuser.enterusername(username2);
-        adminuser.enterpassword(password2);
+        String username1 = ExcelUtility.getStringdata(1, 0,"AdminPage");
+		String password1 = ExcelUtility.getStringdata(1, 1,"AdminPage");
+        adminuser.enterUsername(username1);
+        adminuser.enterPassword(password1);
         String dropdown=ExcelUtility.getStringdata(1, 2,"AdminPage");
         adminuser.dropdown(dropdown);
         adminuser.savebutton();

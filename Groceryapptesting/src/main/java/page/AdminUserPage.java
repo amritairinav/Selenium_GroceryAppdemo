@@ -4,10 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Wait;
 
-import Utility.PageUtility;
-import Utility.Waitutility;
+import utility.PageUtility;
+import utility.Waitutility;
 
 public class AdminUserPage {
 
@@ -27,43 +26,43 @@ public class AdminUserPage {
 	WebElement alertmessage;
 
 	WebDriver driver;
-	Waitutility waitUtil;
-
+	Waitutility wait = new Waitutility();
+    PageUtility page = new PageUtility();
 	public AdminUserPage(WebDriver driver) {
 		this.driver = driver;
-		this.waitUtil = new Waitutility();
 		PageFactory.initElements(driver, this);
 	}
 
 	public void moreinfo() {
-		waitUtil.waitForElementToBeClickable(driver, moreinfo);
+		wait.waitForElementToBeClickable(driver, moreinfo);
 		moreinfo.click();
 	}
+
 	public void newbutton() {
-		waitUtil.waitForElementToBeClickable(driver, newbutton);
+		wait.waitForElementToBeClickable(driver, newbutton);
 		newbutton.click();
 	}
 
-	public void enterusername(String Username) {
-		waitUtil.waitForElementToBeClickable(driver, username);
+	public void enterUsername(String Username) {
+		wait.waitForElementToBeClickable(driver, username);
 		username.sendKeys(Username);
 	}
 
-	public void enterpassword(String Password) {
-		waitUtil.waitForElementToBeClickable(driver, password);
+	public void enterPassword(String Password) {
+		wait.waitForElementToBeClickable(driver, password);
 		password.sendKeys(Password);
 	}
 
 	public void dropdown(String Dropdown) {
-		PageUtility pu = new PageUtility();
-		pu.dropdownVisibleText(dropdown, Dropdown);
+		page.dropdownVisibleText(dropdown, Dropdown);
 	}
 
 	public void savebutton() {
 		savebutton.click();
 	}
-	 public boolean isalertdisplayed() {
-		 return alertmessage.isDisplayed();
-	 }
-	
+
+	public boolean isalertdisplayed() {
+		return alertmessage.isDisplayed();
+	}
+
 }

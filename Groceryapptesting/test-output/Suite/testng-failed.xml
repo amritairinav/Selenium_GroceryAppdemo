@@ -14,7 +14,7 @@
         <methods>
           <include name="browserQuitAndClose"/>
           <include name="browserInitialization"/>
-          <include name="manageCategory"/>
+          <include name="addCategory"/>
         </methods>
       </class> <!-- testscript.ManageCategoryTestcase -->
     </classes>

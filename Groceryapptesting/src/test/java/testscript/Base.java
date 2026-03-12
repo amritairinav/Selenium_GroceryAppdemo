@@ -9,8 +9,8 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import Utility.Waitutility;
-import Utility.ScreenshotUtility;
+import utility.ScreenshotUtility;
+import utility.Waitutility;
 
 
 
@@ -33,9 +33,9 @@ public class Base {
 	    if(iTestResult.getStatus() == ITestResult.FAILURE) {
 	        ScreenshotUtility screenshot = new ScreenshotUtility();
 	        screenshot.getScreenshot(driver, iTestResult.getName());
-	    	        driver.quit();
+	    	        
 	    }
-	
+	    driver.quit();
 	}
 }
 

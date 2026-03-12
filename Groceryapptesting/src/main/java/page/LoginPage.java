@@ -13,29 +13,35 @@ import org.openqa.selenium.support.PageFactory;
 		@FindBy(xpath="//button[@type='submit']")WebElement submit;
 		@FindBy(xpath="//label[@for='remember']")WebElement rememberme;
 		@FindBy(xpath="//p[text()='Dashboard']")WebElement dashboard;
+		@FindBy(css="button[data-dismiss='alert']") WebElement alert;
 		
 		WebDriver driver;
 		public LoginPage(WebDriver driver) {
 			this.driver=driver;
 			PageFactory.initElements(driver, this);
 		}
-		public void entertheusername(String Username1) {
-			username.sendKeys(Username1);
+		public void enterTheusername(String Username) {
+			username.sendKeys(Username);
 		}
-		public void enterthepassword(String password1) {
-			password.sendKeys(password1);
+		public void enterThepassword(String Password) {
+		    password.sendKeys(Password);
 		}
-		
-		public void checkthecheckboxrememberme() {
+		public void checkthCheckboxrememberme() {
 			rememberme.click();
 		}
-		public void clicksignin() {
+		public void clickSignin() {
 			submit.click();
 		}
 		 public boolean isdashBoarddisplayed() {
 		        return dashboard.isDisplayed();
 			
+	}
+		 public boolean isalertdisplayed() {
+		        return alert.isDisplayed();
+	}
+		 public String validationMessage() {
+			 return username.getAttribute("ValidationMessage");
+		 
 		 }
-}
-
+	}
 	

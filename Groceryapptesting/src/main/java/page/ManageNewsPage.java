@@ -33,7 +33,7 @@ public class ManageNewsPage {
 		newbutton.click();
 	}
 
-	public void newstextarea(String newstextarea1) {
+	public void newsTextarea(String newstextarea1) {
 		newstextarea.sendKeys(newstextarea1);
 
 	}

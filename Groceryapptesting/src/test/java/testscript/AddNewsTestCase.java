@@ -5,23 +5,24 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Utility.CommonLogin;
-import Utility.ExcelUtility;
 import page.LoginPage;
 import page.ManageNewsPage;
+import utility.CommonLogin;
+import utility.ExcelUtility;
 
 public class AddNewsTestCase extends Base { 
 
-	@Test
+	@Test(description="Verify if the user is able to add news and save")
 	public void addNews() throws IOException {
-		String username1 = ExcelUtility.getStringdata(1, 0, "LoginPage");
-		String password1 = ExcelUtility.getStringdata(1, 1, "LoginPage");
-		new CommonLogin(driver,username1,password1);
+		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
+		String password = ExcelUtility.getStringdata(1, 1, "LoginPage");
+		CommonLogin login = new CommonLogin();
+		login.login(driver, username, password);
 		ManageNewsPage news = new ManageNewsPage(driver);
 		news.moreinfo();
 		news.newbutton();
-		String newstextarea1 = ExcelUtility.getStringdata(1, 0, "NewsPage");
-		news.newstextarea(newstextarea1);
+		String newstextarea = ExcelUtility.getStringdata(1, 0, "NewsPage");
+		news.newsTextarea(newstextarea);
 		news.savebutton();
 		boolean message = news.isalertdisplayed();
 		Assert.assertTrue(message);

@@ -5,25 +5,26 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Utility.CommonLogin;
-import Utility.ExcelUtility;
 import page.ManageCategoryPage;
+import utility.CommonLogin;
+import utility.ExcelUtility;
 
 public class ManageCategoryTestcase extends Base {
-	@Test
-	public void manageCategory() throws IOException {
-		String username1 = ExcelUtility.getStringdata(1, 0,"LoginPage");
-		String password1 = ExcelUtility.getStringdata(1, 1,"LoginPage");
-		new CommonLogin(driver,username1,password1);
+	@Test(description="Verify if the user is able to add and save new categories")
+	public void addCategory() throws IOException {
+		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
+		String password = ExcelUtility.getStringdata(1, 1, "LoginPage");
+		CommonLogin login = new CommonLogin();
+		login.login(driver, username, password);
 		ManageCategoryPage managecategorypage=new ManageCategoryPage(driver);
 		managecategorypage.moreinfo();
-		managecategorypage.newbutton();
+		managecategorypage.newButton();
 		String Category=ExcelUtility.getStringdata(1, 0,"CategoryPage");
 		managecategorypage.enterCategory(Category);
 		managecategorypage.clickList();
 		managecategorypage.uploadAdminImage();
-		managecategorypage.savebutton();
-		boolean message = managecategorypage.isalertdisplayed();
+		managecategorypage.saveButton();
+		boolean message = managecategorypage.isalertDisplayed();
 		Assert.assertTrue(message);
 	}
 	

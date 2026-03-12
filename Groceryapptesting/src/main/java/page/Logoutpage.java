@@ -23,10 +23,10 @@ public class Logoutpage {
 		admin.click();
 	}
 
-	public void logout() {
+	public void logOut() {
 		logout.click();
 	}
-	public boolean isusernamedisplayed() {
+	public boolean isUsernamedisplayed() {
         return username.isDisplayed();
 
 }

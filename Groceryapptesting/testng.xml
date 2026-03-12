@@ -8,6 +8,8 @@
       <class name="testscript.AddNewsTestCase"/>
       <class name="testscript.AdminUserTestCase"/>
       <class name="testscript.ManageCategoryTestcase"/>
+      <class name="testscript.ManageFooterTestCase"/>
+      <class name="testscript.MananageContactsTestCase"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
