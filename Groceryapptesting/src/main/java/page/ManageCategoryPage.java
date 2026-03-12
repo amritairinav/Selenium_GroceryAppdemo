@@ -1,6 +1,5 @@
 package page;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -9,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import constant.Constant;
 import utility.FileUpload;
+import utility.PageUtility;
 import utility.Waitutility;
 
 public class ManageCategoryPage {
@@ -29,7 +29,8 @@ public class ManageCategoryPage {
 	WebElement alertmessage;
 
 	WebDriver driver;
-	
+	Waitutility wait = new Waitutility();
+	PageUtility page = new PageUtility();
 
 	public ManageCategoryPage(WebDriver driver) {
 		this.driver = driver;
@@ -57,19 +58,20 @@ public class ManageCategoryPage {
 	public void uploadAdminImage() {
 
 		FileUpload upload = new FileUpload();
-		upload.uploadFile(uploadimage,Constant.IMAGEFILE);
+		upload.uploadFile(uploadimage, Constant.IMAGEFILE);
 	}
-	
-	 public void saveButton() {
-		 Waitutility waitUtil=new Waitutility();
-	     waitUtil.waitForElementToBeClickable(driver,savebutton);
-		 Actions action = new Actions(driver);
-		 action.moveToElement(savebutton).perform();
-         savebutton.click();
-	       	    }
 
-	 public boolean isalertDisplayed() {
-		 return alertmessage.isDisplayed();
-	 }
+	public void saveButton() {
+		page.movetoElement(driver, savebutton);
+		wait.waitForElementToBeClickable(driver, savebutton);
+		Actions action = new Actions(driver);
+	    action.moveToElement(savebutton).click().perform();
+	}
+		
 	
+
+	public boolean isalertDisplayed() {
+		return alertmessage.isDisplayed();
+	}
+
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utility.PageUtility;
 import utility.Waitutility;
 
 public class ManageContactsPage {
@@ -28,9 +29,9 @@ public class ManageContactsPage {
 	@FindBy(xpath = "//div[contains(@class,'alert-success')]")
 	WebElement alertmessage;
 
-
 	WebDriver driver;
 	Waitutility wait = new Waitutility();
+	PageUtility page = new PageUtility();
 
 	public ManageContactsPage(WebDriver driver) {
 		this.driver = driver;
@@ -76,11 +77,11 @@ public class ManageContactsPage {
 	}
 
 	public void updatebutton() {
-		wait.waitForElementToBeClickable(driver,updatebutton);
-		Actions action = new Actions(driver);
-		action.moveToElement(updatebutton).perform();
-		updatebutton.click();
-	 	}
+		page.movetoElement(driver, updatebutton);
+		wait.waitForElementToBeClickable(driver, updatebutton);
+	    Actions action = new Actions(driver);
+	    action.moveToElement(updatebutton).click().perform();
+	}
 
 	public boolean isalertDisplayed() {
 		return alertmessage.isDisplayed();

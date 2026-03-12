@@ -27,7 +27,8 @@ public class AdminUserPage {
 
 	WebDriver driver;
 	Waitutility wait = new Waitutility();
-    PageUtility page = new PageUtility();
+	PageUtility page = new PageUtility();
+
 	public AdminUserPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

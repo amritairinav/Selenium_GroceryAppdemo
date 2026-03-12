@@ -22,7 +22,6 @@ public class ManageFooterPage {
 	@FindBy(xpath = "//div[contains(@class,'alert-success')]")
 	WebElement alertmessage;
 
-
 	WebDriver driver;
 
 	public ManageFooterPage(WebDriver driver) {
@@ -34,41 +33,35 @@ public class ManageFooterPage {
 		moreinfo.click();
 	}
 
-    public void editButton() {
-	editbutton.click();
-}
-    public void updateAddress(String Address) {
-    	address.clear();
-    	address.sendKeys(Address);
-    	  	
-    }
-    public void updateEmail(String Email) {
-    	email.clear();
-    	email.sendKeys(Email);
-    	  	
-    }
-    
-    public void updatePhone(String Phone) {
-    	phone.clear();
-    	phone.sendKeys(Phone);
-    	  	
-    }
-    public void updatebutton() {
-    	updatebutton.click();
-    	
-    }
+	public void editButton() {
+		editbutton.click();
+	}
+
+	public void updateAddress(String Address) {
+		address.clear();
+		address.sendKeys(Address);
+
+	}
+
+	public void updateEmail(String Email) {
+		email.clear();
+		email.sendKeys(Email);
+
+	}
+
+	public void updatePhone(String Phone) {
+		phone.clear();
+		phone.sendKeys(Phone);
+
+	}
+
+	public void updatebutton() {
+		updatebutton.click();
+
+	}
 
 	public boolean isalertDisplayed() {
 		return alertmessage.isDisplayed();
 	}
 
-
-    
 }
-    	
-    	
-    	
-    	
-    	
-    	
-    	

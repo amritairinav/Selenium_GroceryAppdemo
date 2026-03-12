@@ -14,7 +14,7 @@ public class ScreenshotUtility {
 
 	public void getScreenshot(WebDriver driver, String failedtestcase) throws IOException {
 		// Take screenshot-interface
-		//convert webdriver to screenshot mode-Typecasting
+		// convert webdriver to screenshot mode-Typecasting
 		TakesScreenshot scrShot = (TakesScreenshot) driver;
 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
 

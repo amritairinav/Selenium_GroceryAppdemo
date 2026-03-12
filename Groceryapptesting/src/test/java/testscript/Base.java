@@ -12,8 +12,6 @@ import org.testng.annotations.BeforeMethod;
 import utility.ScreenshotUtility;
 import utility.Waitutility;
 
-
-
 public class Base {
 	public WebDriver driver;
 
@@ -22,20 +20,18 @@ public class Base {
 	public void browserInitialization() {
 		driver = new ChromeDriver();
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
-		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waitutility.IMPLICITWAIT));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Waitutility.IMPLICITWAIT));
 		driver.manage().window().maximize();
 	}
 
-	
 	@AfterMethod
 	public void browserQuitAndClose(ITestResult iTestResult) throws IOException {
-	    // Take screenshot on failure
-	    if(iTestResult.getStatus() == ITestResult.FAILURE) {
-	        ScreenshotUtility screenshot = new ScreenshotUtility();
-	        screenshot.getScreenshot(driver, iTestResult.getName());
-	    	        
-	    }
-	    driver.quit();
+		// Take screenshot on failure
+		if (iTestResult.getStatus() == ITestResult.FAILURE) {
+			ScreenshotUtility screenshot = new ScreenshotUtility();
+			screenshot.getScreenshot(driver, iTestResult.getName());
+
+		}
+		driver.quit();
 	}
 }
-

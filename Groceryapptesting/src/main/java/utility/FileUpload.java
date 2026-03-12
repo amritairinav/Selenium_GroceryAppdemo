@@ -9,15 +9,13 @@ import java.awt.event.KeyEvent;
 import org.openqa.selenium.WebElement;
 
 public class FileUpload {
-	
-	
-		 public void uploadFile(WebElement element, String filepath) {
-		        element.sendKeys(filepath);
-		    }
 
-			
+	public void uploadFile(WebElement element, String filepath) {
+		element.sendKeys(filepath);
+	}
+
 	public void fileuploadrobotclass(WebElement element, String path) throws AWTException {
-		
+
 		StringSelection string = new StringSelection(path);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(string, null);
 		Robot robot = new Robot();
@@ -28,5 +26,5 @@ public class FileUpload {
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
-}
+	}
 }

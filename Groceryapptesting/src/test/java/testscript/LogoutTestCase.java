@@ -12,16 +12,16 @@ import utility.ExcelUtility;
 
 public class LogoutTestCase extends Base {
 
-	@Test(description="Verify if user is able to log out") 
+	@Test(description = "Verify if user is able to log out")
 	public void performLogout() throws IOException {
 		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(1, 1, "LoginPage");
 		CommonLogin login = new CommonLogin();
 		login.login(driver, username, password);
 		Logoutpage logout = new Logoutpage(driver);
-        logout.admin();
-        logout.logOut();
-        boolean field = logout.isUsernamedisplayed();
+		logout.admin();
+		logout.logOut();
+		boolean field = logout.isUsernamedisplayed();
 		Assert.assertTrue(field);
 
 	}
