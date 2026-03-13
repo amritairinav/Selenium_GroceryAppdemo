@@ -10,6 +10,13 @@
           <include name="browserInitialization"/>
         </methods>
       </class> <!-- testscript.AdminUserTestCase -->
+      <class name="testscript.ManageFooterTestCase">
+        <methods>
+          <include name="browserQuitAndClose"/>
+          <include name="browserInitialization"/>
+          <include name="updateFooterinformations"/>
+        </methods>
+      </class> <!-- testscript.ManageFooterTestCase -->
       <class name="testscript.ManageCategoryTestcase">
         <methods>
           <include name="browserQuitAndClose"/>

@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import page.LoginPage;
 import page.ManageNewsPage;
 import utility.CommonLogin;
 import utility.ExcelUtility;

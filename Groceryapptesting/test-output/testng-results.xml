@@ -1,95 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="11" passed="9" failed="2" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-12T22:39:17 IST" name="Suite" finished-at="2026-03-12T22:40:04 IST" duration-ms="47420">
+  <suite started-at="2026-03-14T00:12:54 IST" name="Suite" finished-at="2026-03-14T00:13:43 IST" duration-ms="49385">
     <groups>
     </groups>
-    <test started-at="2026-03-12T22:39:17 IST" name="Test" finished-at="2026-03-12T22:40:04 IST" duration-ms="47420">
+    <test started-at="2026-03-14T00:12:54 IST" name="Test" finished-at="2026-03-14T00:13:43 IST" duration-ms="49385">
       <class name="testscript.AdminUserTestCase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.AdminUserTestCase@302552ec]" started-at="2026-03-12T22:39:36 IST" name="browserInitialization" finished-at="2026-03-12T22:39:38 IST" duration-ms="1471" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.AdminUserTestCase@302552ec]" started-at="2026-03-14T00:13:21 IST" name="browserInitialization" finished-at="2026-03-14T00:13:23 IST" duration-ms="2024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@302552ec]" started-at="2026-03-12T22:39:38 IST" name="addAdminuserInfo" description="Verify if the user is able to add and save admin user details" finished-at="2026-03-12T22:39:45 IST" duration-ms="7203" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
-  (Session info: chrome=145.0.7632.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4fa3015dd18a7a6dac8c6616e6025b8e, findElement {using=xpath, value=//div[contains(@class,'alert-success')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64498}, goog:processID: 20992, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64498/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4fa3015dd18a7a6dac8c6616e6025b8e]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
-  (Session info: chrome=145.0.7632.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4fa3015dd18a7a6dac8c6616e6025b8e, findElement {using=xpath, value=//div[contains(@class,'alert-success')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64498}, goog:processID: 20992, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64498/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4fa3015dd18a7a6dac8c6616e6025b8e
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
-at page.AdminUserPage.isalertdisplayed(AdminUserPage.java:66)
-at testscript.AdminUserTestCase.addAdminuserInfo(AdminUserTestCase.java:29)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@302552ec]" started-at="2026-03-14T00:13:23 IST" name="addAdminuserInfo" description="Verify if the user is able to add and save admin user details" finished-at="2026-03-14T00:13:26 IST" duration-ms="3013" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAdminuserInfo -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUserTestCase@302552ec]" started-at="2026-03-12T22:39:45 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:46 IST" duration-ms="675" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUserTestCase@302552ec]" started-at="2026-03-14T00:13:26 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:27 IST" duration-ms="309" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addAdminuserInfo status=FAILURE method=AdminUserTestCase.addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@302552ec] output={null}]]]>
+                <![CDATA[[TestResult name=addAdminuserInfo status=SUCCESS method=AdminUserTestCase.addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@302552ec] output={null}]]]>
               </value>
             </param>
           </params>
@@ -98,89 +28,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- browserQuitAndClose -->
       </class> <!-- testscript.AdminUserTestCase -->
       <class name="testscript.ManageCategoryTestcase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e]" started-at="2026-03-12T22:39:46 IST" name="browserInitialization" finished-at="2026-03-12T22:39:48 IST" duration-ms="1968" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e]" started-at="2026-03-14T00:13:27 IST" name="browserInitialization" finished-at="2026-03-14T00:13:28 IST" duration-ms="1813" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e]" started-at="2026-03-12T22:39:48 IST" name="addCategory" description="Verify if the user is able to add and save new categories" finished-at="2026-03-12T22:39:55 IST" duration-ms="7271" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
-  (Session info: chrome=145.0.7632.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f3f7e01106e2400ee488ff756ddd45eb, findElement {using=xpath, value=//div[contains(@class,'alert-success')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52548}, goog:processID: 16912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52548/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f3f7e01106e2400ee488ff756ddd45eb]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
-  (Session info: chrome=145.0.7632.160)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f3f7e01106e2400ee488ff756ddd45eb, findElement {using=xpath, value=//div[contains(@class,'alert-success')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52548}, goog:processID: 16912, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52548/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f3f7e01106e2400ee488ff756ddd45eb
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
-at page.ManageCategoryPage.isalertDisplayed(ManageCategoryPage.java:74)
-at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e]" started-at="2026-03-14T00:13:28 IST" name="addCategory" description="Verify if the user is able to add and save new categories" finished-at="2026-03-14T00:13:32 IST" duration-ms="3634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCategory -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e]" started-at="2026-03-12T22:39:55 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:55 IST" duration-ms="324" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e]" started-at="2026-03-14T00:13:32 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:32 IST" duration-ms="332" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addCategory status=FAILURE method=ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e] output={null}]]]>
+                <![CDATA[[TestResult name=addCategory status=SUCCESS method=ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@3d285d7e] output={null}]]]>
               </value>
             </param>
           </params>
@@ -189,15 +49,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- browserQuitAndClose -->
       </class> <!-- testscript.ManageCategoryTestcase -->
       <class name="testscript.LogoutTestCase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LogoutTestCase@bcec361]" started-at="2026-03-12T22:39:31 IST" name="browserInitialization" finished-at="2026-03-12T22:39:32 IST" duration-ms="1392" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LogoutTestCase@bcec361]" started-at="2026-03-14T00:13:12 IST" name="browserInitialization" finished-at="2026-03-14T00:13:15 IST" duration-ms="2674" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="performLogout()[pri:0, instance:testscript.LogoutTestCase@bcec361]" started-at="2026-03-12T22:39:32 IST" name="performLogout" description="Verify if user is able to log out" finished-at="2026-03-12T22:39:33 IST" duration-ms="963" status="PASS">
+        <test-method signature="performLogout()[pri:0, instance:testscript.LogoutTestCase@bcec361]" started-at="2026-03-14T00:13:15 IST" name="performLogout" description="Verify if user is able to log out" finished-at="2026-03-14T00:13:16 IST" duration-ms="1604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogout -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LogoutTestCase@bcec361]" started-at="2026-03-12T22:39:33 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:33 IST" duration-ms="214" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LogoutTestCase@bcec361]" started-at="2026-03-14T00:13:16 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:16 IST" duration-ms="298" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -210,15 +70,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- browserQuitAndClose -->
       </class> <!-- testscript.LogoutTestCase -->
       <class name="testscript.LoginTestCase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:17 IST" name="browserInitialization" finished-at="2026-03-12T22:39:19 IST" duration-ms="2616" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:12:54 IST" name="browserInitialization" finished-at="2026-03-14T00:12:58 IST" duration-ms="4380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="login_validUsernameandcredentials()[pri:1, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:19 IST" name="login_validUsernameandcredentials" description="Verify login functionaility" finished-at="2026-03-12T22:39:21 IST" duration-ms="1481" status="PASS">
+        <test-method signature="login_validUsernameandcredentials()[pri:1, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:12:58 IST" name="login_validUsernameandcredentials" description="Verify login functionaility" finished-at="2026-03-14T00:13:00 IST" duration-ms="2374" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_validUsernameandcredentials -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:21 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:21 IST" duration-ms="257" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:00 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:01 IST" duration-ms="286" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,15 +89,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuitAndClose -->
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:21 IST" name="browserInitialization" finished-at="2026-03-12T22:39:23 IST" duration-ms="1783" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:01 IST" name="browserInitialization" finished-at="2026-03-14T00:13:03 IST" duration-ms="1933" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="login_validusernameAndInvalidpassword()[pri:2, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:23 IST" name="login_validusernameAndInvalidpassword" description="Verify login with valid username and invalid password" finished-at="2026-03-12T22:39:24 IST" duration-ms="620" status="PASS">
+        <test-method signature="login_validusernameAndInvalidpassword()[pri:2, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:03 IST" name="login_validusernameAndInvalidpassword" description="Verify login with valid username and invalid password" finished-at="2026-03-14T00:13:03 IST" duration-ms="752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_validusernameAndInvalidpassword -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:24 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:24 IST" duration-ms="228" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:03 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:04 IST" duration-ms="339" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -248,15 +108,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuitAndClose -->
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:24 IST" name="browserInitialization" finished-at="2026-03-12T22:39:25 IST" duration-ms="1564" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:04 IST" name="browserInitialization" finished-at="2026-03-14T00:13:06 IST" duration-ms="1843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="login_invalidusernameAndValidpassword()[pri:3, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:25 IST" name="login_invalidusernameAndValidpassword" description="Verify login with invalid username and valid password" finished-at="2026-03-12T22:39:26 IST" duration-ms="533" status="PASS">
+        <test-method signature="login_invalidusernameAndValidpassword()[pri:3, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:06 IST" name="login_invalidusernameAndValidpassword" description="Verify login with invalid username and valid password" finished-at="2026-03-14T00:13:06 IST" duration-ms="781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_invalidusernameAndValidpassword -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:26 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:26 IST" duration-ms="218" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:06 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:07 IST" duration-ms="243" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -267,15 +127,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuitAndClose -->
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:26 IST" name="browserInitialization" finished-at="2026-03-12T22:39:28 IST" duration-ms="1902" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:07 IST" name="browserInitialization" finished-at="2026-03-14T00:13:08 IST" duration-ms="1737" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="login_incorrectusernameAndpassword()[pri:4, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:28 IST" name="login_incorrectusernameAndpassword" description="Verify login with invalid username and password" finished-at="2026-03-12T22:39:29 IST" duration-ms="593" status="PASS">
+        <test-method signature="login_incorrectusernameAndpassword()[pri:4, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:08 IST" name="login_incorrectusernameAndpassword" description="Verify login with invalid username and password" finished-at="2026-03-14T00:13:09 IST" duration-ms="767" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_incorrectusernameAndpassword -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:29 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:29 IST" duration-ms="229" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:09 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:09 IST" duration-ms="216" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -286,15 +146,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuitAndClose -->
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:29 IST" name="browserInitialization" finished-at="2026-03-12T22:39:30 IST" duration-ms="1362" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:09 IST" name="browserInitialization" finished-at="2026-03-14T00:13:11 IST" duration-ms="1656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="login_emptyUsernameAndPassword()[pri:5, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:30 IST" name="login_emptyUsernameAndPassword" description="Verify login with empty username and password" finished-at="2026-03-12T22:39:31 IST" duration-ms="393" status="PASS">
+        <test-method signature="login_emptyUsernameAndPassword()[pri:5, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:11 IST" name="login_emptyUsernameAndPassword" description="Verify login with empty username and password" finished-at="2026-03-14T00:13:12 IST" duration-ms="543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_emptyUsernameAndPassword -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-12T22:39:31 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:31 IST" duration-ms="160" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@36ebc363]" started-at="2026-03-14T00:13:12 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:12 IST" duration-ms="337" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -307,15 +167,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- browserQuitAndClose -->
       </class> <!-- testscript.LoginTestCase -->
       <class name="testscript.ManageFooterTestCase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.ManageFooterTestCase@40005471]" started-at="2026-03-12T22:39:55 IST" name="browserInitialization" finished-at="2026-03-12T22:39:57 IST" duration-ms="1793" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.ManageFooterTestCase@40005471]" started-at="2026-03-14T00:13:32 IST" name="browserInitialization" finished-at="2026-03-14T00:13:34 IST" duration-ms="1937" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="updateFooterinformations()[pri:0, instance:testscript.ManageFooterTestCase@40005471]" started-at="2026-03-12T22:39:57 IST" name="updateFooterinformations" description="Verify if user is able to update footer informations" finished-at="2026-03-12T22:39:59 IST" duration-ms="1788" status="PASS">
+        <test-method signature="updateFooterinformations()[pri:0, instance:testscript.ManageFooterTestCase@40005471]" started-at="2026-03-14T00:13:34 IST" name="updateFooterinformations" description="Verify if user is able to update footer informations" finished-at="2026-03-14T00:13:37 IST" duration-ms="2620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateFooterinformations -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageFooterTestCase@40005471]" started-at="2026-03-12T22:39:59 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:59 IST" duration-ms="227" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageFooterTestCase@40005471]" started-at="2026-03-14T00:13:37 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:37 IST" duration-ms="288" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -328,15 +188,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- browserQuitAndClose -->
       </class> <!-- testscript.ManageFooterTestCase -->
       <class name="testscript.MananageContactsTestCase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.MananageContactsTestCase@2cd76f31]" started-at="2026-03-12T22:39:59 IST" name="browserInitialization" finished-at="2026-03-12T22:40:01 IST" duration-ms="1939" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.MananageContactsTestCase@2cd76f31]" started-at="2026-03-14T00:13:37 IST" name="browserInitialization" finished-at="2026-03-14T00:13:39 IST" duration-ms="1682" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="updateContactinfo()[pri:0, instance:testscript.MananageContactsTestCase@2cd76f31]" started-at="2026-03-12T22:40:01 IST" name="updateContactinfo" description="verify if user is able to update contacts" finished-at="2026-03-12T22:40:04 IST" duration-ms="2820" status="PASS">
+        <test-method signature="updateContactinfo()[pri:0, instance:testscript.MananageContactsTestCase@2cd76f31]" started-at="2026-03-14T00:13:39 IST" name="updateContactinfo" description="verify if user is able to update contacts" finished-at="2026-03-14T00:13:43 IST" duration-ms="3669" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateContactinfo -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.MananageContactsTestCase@2cd76f31]" started-at="2026-03-12T22:40:04 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:40:04 IST" duration-ms="213" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.MananageContactsTestCase@2cd76f31]" started-at="2026-03-14T00:13:43 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:43 IST" duration-ms="369" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -349,15 +209,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- browserQuitAndClose -->
       </class> <!-- testscript.MananageContactsTestCase -->
       <class name="testscript.AddNewsTestCase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.AddNewsTestCase@26794848]" started-at="2026-03-12T22:39:33 IST" name="browserInitialization" finished-at="2026-03-12T22:39:35 IST" duration-ms="1381" status="PASS">
+        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.AddNewsTestCase@26794848]" started-at="2026-03-14T00:13:16 IST" name="browserInitialization" finished-at="2026-03-14T00:13:18 IST" duration-ms="1915" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="addNews()[pri:0, instance:testscript.AddNewsTestCase@26794848]" started-at="2026-03-12T22:39:35 IST" name="addNews" description="Verify if the user is able to add news and save" finished-at="2026-03-12T22:39:36 IST" duration-ms="1523" status="PASS">
+        <test-method signature="addNews()[pri:0, instance:testscript.AddNewsTestCase@26794848]" started-at="2026-03-14T00:13:18 IST" name="addNews" description="Verify if the user is able to add news and save" finished-at="2026-03-14T00:13:21 IST" duration-ms="2592" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addNews -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AddNewsTestCase@26794848]" started-at="2026-03-12T22:39:36 IST" name="browserQuitAndClose" finished-at="2026-03-12T22:39:36 IST" duration-ms="240" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AddNewsTestCase@26794848]" started-at="2026-03-14T00:13:21 IST" name="browserQuitAndClose" finished-at="2026-03-14T00:13:21 IST" duration-ms="312" status="PASS">
           <params>
             <param index="0">
               <value>
