@@ -64,9 +64,8 @@ public class ManageCategoryPage {
 	public void saveButton() {
 		page.movetoElement(driver, savebutton);
 		wait.waitForElementToBeClickable(driver, savebutton);
-
-		Actions action = new Actions(driver);
-		action.moveToElement(savebutton).click().perform();
+		page.actionClick(driver, savebutton); 
+				
 	}
 
 	public boolean isalertDisplayed() {

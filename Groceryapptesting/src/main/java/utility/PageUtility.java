@@ -29,9 +29,9 @@ public class PageUtility {
 
 	}
 
-	public void mouseHover(WebDriver driver, WebElement element) {
+	public void actionClick(WebDriver driver, WebElement element) {
 		Actions action = new Actions(driver);
-		action.moveToElement(element).perform();
+		action.click(element).perform();
 	}
 
 	public void doubleClick(WebDriver driver, WebElement element) {

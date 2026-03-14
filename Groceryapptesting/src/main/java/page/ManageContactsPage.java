@@ -79,8 +79,7 @@ public class ManageContactsPage {
 	public void updatebutton() {
 		page.movetoElement(driver, updatebutton);
 		wait.waitForElementToBeClickable(driver, updatebutton);
-	    Actions action = new Actions(driver);
-	    action.moveToElement(updatebutton).click().perform();
+	    page.actionClick(driver, updatebutton);
 	}
 
 	public boolean isalertDisplayed() {
