@@ -5,12 +5,14 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import page.AdminUserPage;
 import utility.CommonLogin;
 import utility.ExcelUtility;
 
 public class AdminUserTestCase extends Base {
-	@Test(description = "Verify if the user is able to add and save admin user details")
+	@Test(description = "Verify if the user is able to add and save admin user details",groups = {
+	"Regression" }, retryAnalyzer = retry.Retry.class)
 	public void addAdminuserInfo() throws IOException {
 		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(1, 1, "LoginPage");
@@ -27,7 +29,7 @@ public class AdminUserTestCase extends Base {
 		adminuser.dropdown(dropdown);
 		adminuser.savebutton();
 		boolean message = adminuser.isalertdisplayed();
-		Assert.assertTrue(message);
+		Assert.assertTrue(message, Constant.Admin_User_Created_Successfully);
 
 	}
 }

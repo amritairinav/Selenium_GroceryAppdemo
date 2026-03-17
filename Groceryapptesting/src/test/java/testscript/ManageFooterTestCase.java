@@ -5,13 +5,15 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import page.ManageFooterPage;
 import utility.CommonLogin;
 import utility.ExcelUtility;
 
 public class ManageFooterTestCase extends Base {
 
-	@Test(description = "Verify if user is able to update footer informations")
+	@Test(description = "Verify if user is able to update footer informations",groups = {
+	"Regression" }, retryAnalyzer = retry.Retry.class)
 
 	public void updateFooterinformations() throws IOException {
 		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
@@ -30,7 +32,7 @@ public class ManageFooterTestCase extends Base {
 		managefooter.updatePhone(Phone);
 		managefooter.updatebutton();
 		boolean message = managefooter.isalertDisplayed();
-		Assert.assertTrue(message);
+		Assert.assertTrue(message, Constant.Footer_Text_Updated_Successfully);
 
 	}
 

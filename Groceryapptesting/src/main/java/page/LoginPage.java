@@ -53,7 +53,7 @@ public class LoginPage {
 	}
 
 	public String validationMessage() {
-		return username.getAttribute("ValidationMessage");
+		return username.getAttribute("validationmessage");
 
 	}
 }

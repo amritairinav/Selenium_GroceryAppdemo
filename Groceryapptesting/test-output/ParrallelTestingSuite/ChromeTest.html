@@ -1,0 +1,1392 @@
+<html>
+<head>
+<title>TestNG:  ChromeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ChromeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/3/7</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Mar 18 00:02:40 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>93 seconds (93525 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testscript.LoginTestCase.browserQuitAndClose()'><b>browserQuitAndClose</b><br>Test class: testscript.LoginTestCase<br>Parameters: [TestResult name=login_validUsernameandcredentials status=SKIP method=LoginTestCase.login_validUsernameandcredentials()[pri:1, instance:testscript.LoginTestCase@702657cc] output={null}]</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1521240558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1521240558'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.browserQuitAndClose()'><b>browserQuitAndClose</b><br>Test class: testscript.LoginTestCase<br>Parameters: [TestResult name=login_validusernameAndInvalidpassword status=SKIP method=LoginTestCase.login_validusernameAndInvalidpassword()[pri:2, instance:testscript.LoginTestCase@702657cc] output={null}]</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fa34b3aaf3b5bdf34a5a4b39fe09a88a, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56625}, goog:processID: 32704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56625/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fa34b3aaf3b5bdf34a5a4b39fe09a88a
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@59c083b[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@f64634b[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@1a38cd7]] rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 89]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@59c083b[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@f64634b[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@1a38cd7]] rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 89]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace516095639", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace516095639'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fa34b3aaf3b5bdf34a5a4b39fe09a88a, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56625}, goog:processID: 32704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56625/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fa34b3aaf3b5bdf34a5a4b39fe09a88a
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@59c083b[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@f64634b[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@1a38cd7]] rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 89]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@59c083b[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@f64634b[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@1a38cd7]] rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 89]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.browserQuitAndClose()'><b>browserQuitAndClose</b><br>Test class: testscript.LoginTestCase<br>Parameters: [TestResult name=login_validusernameAndInvalidpassword status=FAILURE method=LoginTestCase.login_validusernameAndInvalidpassword()[pri:2, instance:testscript.LoginTestCase@702657cc] output={null}]</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e5cf21162ea5751464e706bbb13a34f1, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49683}, goog:processID: 27388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49683/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e5cf21162ea5751464e706bbb13a34f1
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:346)
+	at utility.ScreenshotUtility.getScreenshot(ScreenshotUtility.java:19)
+	at testscript.Base.browserQuitAndClose(Base.java:65)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4e8e5d63[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@53e686aa[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@610ffdc0]] rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	... 26 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1126808430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1126808430'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e5cf21162ea5751464e706bbb13a34f1, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49683}, goog:processID: 27388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49683/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e5cf21162ea5751464e706bbb13a34f1
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:346)
+	at utility.ScreenshotUtility.getScreenshot(ScreenshotUtility.java:19)
+	at testscript.Base.browserQuitAndClose(Base.java:65)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4e8e5d63[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@53e686aa[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@610ffdc0]] rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.initialiseBrowser()'><b>initialiseBrowser</b><br>Test class: testscript.LoginTestCase<br>Parameters: chrome</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5bf80e9f6fe8f88a4788e3674045c81, setTimeout [implicit]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61578}, goog:processID: 20624, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61578/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5bf80e9f6fe8f88a4788e3674045c81
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:981)
+	at testscript.Base.initialiseBrowser(Base.java:56)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7459aa9c[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@4e40a662[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@1398bc2]] rejected from java.util.concurrent.ThreadPoolExecutor@7f2992c5[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 27]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	... 22 more
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1823287236", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1823287236'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5bf80e9f6fe8f88a4788e3674045c81, setTimeout [implicit]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61578}, goog:processID: 20624, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61578/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5bf80e9f6fe8f88a4788e3674045c81
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.implicitlyWait(RemoteWebDriver.java:981)
+	at testscript.Base.initialiseBrowser(Base.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@7459aa9c[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@4e40a662[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@1398bc2]] rejected from java.util.concurrent.ThreadPoolExecutor@7f2992c5[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 27]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	... 22 more
+</pre></div></td>
+<td>10</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testscript.LoginTestCase.login_validusernameAndInvalidpassword()'><b>login_validusernameAndInvalidpassword</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login with valid username and invalid password</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e5cf21162ea5751464e706bbb13a34f1, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49683}, goog:processID: 27388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49683/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e5cf21162ea5751464e706bbb13a34f1
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at page.LoginPage.enterTheusername(LoginPage.java:31)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:35)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@6db52fc9 rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 39]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	... 3 more
+Caused by: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@6db52fc9 rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 39]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:972)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+	... 8 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@6db52fc9 rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 39]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.ensureExecutedAsync(HttpClientImpl.java:183)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:175)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:282)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:251)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.onReadError(Http1AsyncReceiver.java:516)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver$Http1TubeSubscriber.onComplete(Http1AsyncReceiver.java:601)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadSubscription.signalCompletion(SocketTube.java:648)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:853)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1477)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1422)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1422)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2142896768", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2142896768'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e5cf21162ea5751464e706bbb13a34f1, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49683}, goog:processID: 27388, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49683/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e5cf21162ea5751464e706bbb13a34f1
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at page.LoginPage.enterTheusername(LoginPage.java:31)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@6db52fc9 rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 39]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	... 3 more
+Caused by: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@6db52fc9 rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 39]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:972)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+	... 8 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@6db52fc9 rejected from java.util.concurrent.ThreadPoolExecutor@4df5c2b9[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 39]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.ensureExecutedAsync(HttpClientImpl.java:183)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:175)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:282)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:251)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.onReadError(Http1AsyncReceiver.java:516)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver$Http1TubeSubscriber.onComplete(Http1AsyncReceiver.java:601)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadSubscription.signalCompletion(SocketTube.java:648)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:853)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1477)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1422)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1422)
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.ManageCategoryTestcase.addCategory()'><b>addCategory</b><br>Test class: testscript.ManageCategoryTestcase<br>Test method: Verify if the user is able to add and save new categories</td>
+<td><div><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at utility.ExcelUtility.getStringdata(ExcelUtility.java:24)
+	at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:17)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0XA4E6A560
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+	... 24 more
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1760919896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1760919896'><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at utility.ExcelUtility.getStringdata(ExcelUtility.java:24)
+	at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0XA4E6A560
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+	... 24 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.ManageCategoryTestcase@15de0b3c</td></tr>
+<tr>
+<td title='testscript.AdminUserTestCase.addAdminuserInfo()'><b>addAdminuserInfo</b><br>Test class: testscript.AdminUserTestCase<br>Test method: Verify if the user is able to add and save admin user details</td>
+<td><div><pre>java.io.IOException: Stream Closed
+	at java.base/java.io.FileInputStream.available0(Native Method)
+	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
+	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at utility.ExcelUtility.getStringdata(ExcelUtility.java:24)
+	at testscript.AdminUserTestCase.addAdminuserInfo(AdminUserTestCase.java:17)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace400863594", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace400863594'><pre>java.io.IOException: Stream Closed
+	at java.base/java.io.FileInputStream.available0(Native Method)
+	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
+	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at utility.ExcelUtility.getStringdata(ExcelUtility.java:24)
+	at testscript.AdminUserTestCase.addAdminuserInfo(AdminUserTestCase.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>testscript.AdminUserTestCase@1a677343</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testscript.MananageContactsTestCase.updateContactinfo()'><b>updateContactinfo</b><br>Test class: testscript.MananageContactsTestCase<br>Test method: verify if user is able to update contacts</td>
+<td></td>
+<td>3</td>
+<td>testscript.MananageContactsTestCase@3857f613</td></tr>
+<tr>
+<td title='testscript.ManageFooterTestCase.updateFooterinformations()'><b>updateFooterinformations</b><br>Test class: testscript.ManageFooterTestCase<br>Test method: Verify if user is able to update footer informations</td>
+<td></td>
+<td>2</td>
+<td>testscript.ManageFooterTestCase@489115ef</td></tr>
+<tr>
+<td title='testscript.AddNewsTestCase.addNews()'><b>addNews</b><br>Test class: testscript.AddNewsTestCase<br>Test method: Verify if the user is able to add news and save</td>
+<td></td>
+<td>2</td>
+<td>testscript.AddNewsTestCase@6ed3ccb2</td></tr>
+<tr>
+<td title='testscript.LogoutTestCase.performLogout()'><b>performLogout</b><br>Test class: testscript.LogoutTestCase<br>Test method: Verify if user is able to log out</td>
+<td></td>
+<td>1</td>
+<td>testscript.LogoutTestCase@74e52ef6</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.login_validUsernameandcredentials()'><b>login_validUsernameandcredentials</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login functionaility</td>
+<td></td>
+<td>2</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testscript.LoginTestCase.login_validusernameAndInvalidpassword()'><b>login_validusernameAndInvalidpassword</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login with valid username and invalid password</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, clickElement {id=f.2514360CF10EB41A74CAABB758C29FA1.d.02021D00B780EC6C6FFA29969350ACB0.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2de5889e12d49c54d27c13a43b7a1780)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+	at page.LoginPage.clickSignin(LoginPage.java:43)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:38)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace360237305", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace360237305'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, clickElement {id=f.2514360CF10EB41A74CAABB758C29FA1.d.02021D00B780EC6C6FFA29969350ACB0.e.7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2de5889e12d49c54d27c13a43b7a1780)] -&gt; xpath: //button[@type=&apos;submit&apos;]]
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+	at page.LoginPage.clickSignin(LoginPage.java:43)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.login_invalidusernameAndValidpassword()'><b>login_invalidusernameAndValidpassword</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login with invalid username and valid password</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1314943986", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1314943986'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.login_emptyUsernameAndPassword()'><b>login_emptyUsernameAndPassword</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login with empty username and password</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1586659744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1586659744'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.login_validusernameAndInvalidpassword()'><b>login_validusernameAndInvalidpassword</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login with valid username and invalid password</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5bf80e9f6fe8f88a4788e3674045c81, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61578}, goog:processID: 20624, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61578/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5bf80e9f6fe8f88a4788e3674045c81
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at page.LoginPage.enterTheusername(LoginPage.java:31)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:35)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@56b4f169[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@3b18aa5b[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@49717baf]] rejected from java.util.concurrent.ThreadPoolExecutor@7f2992c5[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 27]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	... 25 more
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1412715792", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1412715792'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5bf80e9f6fe8f88a4788e3674045c81, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61578}, goog:processID: 20624, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61578/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5bf80e9f6fe8f88a4788e3674045c81
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at page.LoginPage.enterTheusername(LoginPage.java:31)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@56b4f169[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@3b18aa5b[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@49717baf]] rejected from java.util.concurrent.ThreadPoolExecutor@7f2992c5[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 27]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	... 25 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.login_validUsernameandcredentials()'><b>login_validUsernameandcredentials</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login functionaility</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Dashboard&apos;]&quot;}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, findElement {value=//p[text()=&apos;Dashboard&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at page.LoginPage.isdashBoarddisplayed(LoginPage.java:47)
+	at testscript.LoginTestCase.login_validUsernameandcredentials(LoginTestCase.java:25)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace121552087", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace121552087'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//p[text()=&apos;Dashboard&apos;]&quot;}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, findElement {value=//p[text()=&apos;Dashboard&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at page.LoginPage.isdashBoarddisplayed(LoginPage.java:47)
+	at testscript.LoginTestCase.login_validUsernameandcredentials(LoginTestCase.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>10</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.login_validusernameAndInvalidpassword()'><b>login_validusernameAndInvalidpassword</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login with valid username and invalid password</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fa34b3aaf3b5bdf34a5a4b39fe09a88a, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56625}, goog:processID: 32704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56625/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fa34b3aaf3b5bdf34a5a4b39fe09a88a
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at page.LoginPage.enterTheusername(LoginPage.java:31)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:35)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@611fa2c8 rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 87]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	... 3 more
+Caused by: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@611fa2c8 rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 87]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:972)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+	... 8 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@611fa2c8 rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 87]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.ensureExecutedAsync(HttpClientImpl.java:183)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:175)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:282)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:251)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver$Http1TubeSubscriber.onSubscribe(Http1AsyncReceiver.java:564)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadSubscription.signalOnSubscribe(SocketTube.java:658)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.handlePending(SocketTube.java:943)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:798)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.handleSubscribeEvent(SocketTube.java:706)
+	at java.net.http/jdk.internal.net.http.AsyncTriggerEvent.handle(AsyncTriggerEvent.java:54)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1324)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace490621156", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace490621156'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fa34b3aaf3b5bdf34a5a4b39fe09a88a, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56625}, goog:processID: 32704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56625/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fa34b3aaf3b5bdf34a5a4b39fe09a88a
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:588)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
+	at page.LoginPage.enterTheusername(LoginPage.java:31)
+	at testscript.LoginTestCase.login_validusernameAndInvalidpassword(LoginTestCase.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@611fa2c8 rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 87]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:500)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.lambda$executeAsync$2(JdkHttpClient.java:387)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	... 3 more
+Caused by: java.io.IOException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@611fa2c8 rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 87]
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:972)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:459)
+	... 8 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task jdk.internal.net.http.common.SequentialScheduler$SchedulableTask@611fa2c8 rejected from java.util.concurrent.ThreadPoolExecutor@730fe67a[Shutting down, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 87]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.ensureExecutedAsync(HttpClientImpl.java:183)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$DelegatingExecutor.execute(HttpClientImpl.java:175)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:282)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:251)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver$Http1TubeSubscriber.onSubscribe(Http1AsyncReceiver.java:564)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadSubscription.signalOnSubscribe(SocketTube.java:658)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.handlePending(SocketTube.java:943)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:798)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.handleSubscribeEvent(SocketTube.java:706)
+	at java.net.http/jdk.internal.net.http.AsyncTriggerEvent.handle(AsyncTriggerEvent.java:54)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1324)
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+<tr>
+<td title='testscript.LoginTestCase.login_incorrectusernameAndpassword()'><b>login_incorrectusernameAndpassword</b><br>Test class: testscript.LoginTestCase<br>Test method: Verify login with invalid username and password</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace845624877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace845624877'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2de5889e12d49c54d27c13a43b7a1780, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52027}, goog:processID: 27000, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52027/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2de5889e12d49c54d27c13a43b7a1780
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:634)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:458)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:404)
+	at testscript.Base.browserQuitAndClose(Base.java:68)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:805)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:781)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.concurrent.ExecutionException: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:160)
+	... 27 more
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@8ff24e2[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@49c22ed9[Wrapped task = org.openqa.selenium.remote.http.jdk.JdkHttpClient$$Lambda/0x00000273d820d8c0@4dfdb339]] rejected from java.util.concurrent.ThreadPoolExecutor@5a265167[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 122]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1376)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.executeAsync(JdkHttpClient.java:384)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:413)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:126)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+</pre></div></td>
+<td>0</td>
+<td>testscript.LoginTestCase@702657cc</td></tr>
+</table><p>
+</body>
+</html>

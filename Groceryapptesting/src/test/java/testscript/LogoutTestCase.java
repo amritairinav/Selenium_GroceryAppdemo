@@ -12,7 +12,8 @@ import utility.ExcelUtility;
 
 public class LogoutTestCase extends Base {
 
-	@Test(description = "Verify if user is able to log out")
+	@Test(description = "Verify if user is able to log out",groups = {
+	"Regression" }, retryAnalyzer = retry.Retry.class)
 	public void performLogout() throws IOException {
 		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(1, 1, "LoginPage");

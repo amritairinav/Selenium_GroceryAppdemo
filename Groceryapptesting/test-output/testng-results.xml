@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results retried="6" ignored="0" total="17" passed="9" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-14T09:57:21 IST" name="Default suite" finished-at="2026-03-14T09:58:27 IST" duration-ms="66154">
+  <suite started-at="2026-03-18T00:44:35 IST" name="Suite" finished-at="2026-03-18T00:47:14 IST" duration-ms="158450">
     <groups>
+      <group name="Regression">
+        <method signature="AddNewsTestCase.addNews()[pri:0, instance:testscript.AddNewsTestCase@4149c063]" name="addNews" class="testscript.AddNewsTestCase"/>
+        <method signature="AdminUserTestCase.addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" name="addAdminuserInfo" class="testscript.AdminUserTestCase"/>
+        <method signature="LogoutTestCase.performLogout()[pri:0, instance:testscript.LogoutTestCase@5852c06f]" name="performLogout" class="testscript.LogoutTestCase"/>
+        <method signature="ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" name="addCategory" class="testscript.ManageCategoryTestcase"/>
+        <method signature="ManageFooterTestCase.updateFooterinformations()[pri:0, instance:testscript.ManageFooterTestCase@38af9828]" name="updateFooterinformations" class="testscript.ManageFooterTestCase"/>
+        <method signature="MananageContactsTestCase.updateContactinfo()[pri:0, instance:testscript.MananageContactsTestCase@376a0d86]" name="updateContactinfo" class="testscript.MananageContactsTestCase"/>
+        <method signature="LoginTestCase.login_validUsernameandcredentials()[pri:1, instance:testscript.LoginTestCase@4ee203eb]" name="login_validUsernameandcredentials" class="testscript.LoginTestCase"/>
+        <method signature="LoginTestCase.login_validusernameAndInvalidpassword()[pri:2, instance:testscript.LoginTestCase@4ee203eb]" name="login_validusernameAndInvalidpassword" class="testscript.LoginTestCase"/>
+        <method signature="LoginTestCase.login_invalidusernameAndValidpassword()[pri:3, instance:testscript.LoginTestCase@4ee203eb]" name="login_invalidusernameAndValidpassword" class="testscript.LoginTestCase"/>
+        <method signature="LoginTestCase.login_incorrectusernameAndpassword()[pri:4, instance:testscript.LoginTestCase@4ee203eb]" name="login_incorrectusernameAndpassword" class="testscript.LoginTestCase"/>
+        <method signature="LoginTestCase.login_emptyUsernameAndPassword()[pri:5, instance:testscript.LoginTestCase@4ee203eb]" name="login_emptyUsernameAndPassword" class="testscript.LoginTestCase"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2026-03-14T09:57:21 IST" name="Default test" finished-at="2026-03-14T09:58:27 IST" duration-ms="66154">
-      <class name="testscript.ManageCategoryTestcase">
-        <test-method is-config="true" signature="browserInitialization()[pri:0, instance:testscript.ManageCategoryTestcase@75d4a5c2]" started-at="2026-03-14T09:57:21 IST" name="browserInitialization" finished-at="2026-03-14T09:57:58 IST" duration-ms="36854" status="PASS">
+    <test started-at="2026-03-18T00:44:35 IST" name="Test" finished-at="2026-03-18T00:47:14 IST" duration-ms="158450">
+      <class name="testscript.AdminUserTestCase">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:04 IST" name="initialiseBrowser" finished-at="2026-03-18T00:45:07 IST" duration-ms="2648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserInitialization -->
-        <test-method signature="addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@75d4a5c2]" started-at="2026-03-14T09:57:58 IST" name="addCategory" description="Verify if the user is able to add and save new categories" finished-at="2026-03-14T09:58:27 IST" duration-ms="28884" status="FAIL">
+        </test-method> <!-- initialiseBrowser -->
+        <test-method retried="true" signature="addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:07 IST" name="addAdminuserInfo" description="Verify if the user is able to add and save admin user details" finished-at="2026-03-18T00:45:19 IST" duration-ms="12370" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
@@ -20,9 +40,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f26a8cdb9a1287b2c31e9da3c772a8a9, findElement {using=xpath, value=//div[contains(@class,'alert-success')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54913}, goog:processID: 26344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54913/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f26a8cdb9a1287b2c31e9da3c772a8a9]]>
+Command: [f1bd6ac599064bda8204785414a62886, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54346}, goog:processID: 31092, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54346/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f1bd6ac599064bda8204785414a62886]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
@@ -31,9 +51,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f26a8cdb9a1287b2c31e9da3c772a8a9, findElement {using=xpath, value=//div[contains(@class,'alert-success')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54913}, goog:processID: 26344, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54913/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f26a8cdb9a1287b2c31e9da3c772a8a9
+Command: [f1bd6ac599064bda8204785414a62886, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54346}, goog:processID: 31092, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54346/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f1bd6ac599064bda8204785414a62886
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -50,9 +70,395 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at page.AdminUserPage.isalertdisplayed(AdminUserPage.java:66)
+at testscript.AdminUserTestCase.addAdminuserInfo(AdminUserTestCase.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAdminuserInfo -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:19 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:45:21 IST" duration-ms="1742" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addAdminuserInfo status=SKIP method=AdminUserTestCase.addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:21 IST" name="initialiseBrowser" finished-at="2026-03-18T00:45:23 IST" duration-ms="2582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method retried="true" signature="addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:23 IST" name="addAdminuserInfo" description="Verify if the user is able to add and save admin user details" finished-at="2026-03-18T00:45:35 IST" duration-ms="11889" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aeebc66103beec497f6ef57f8912c6a, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56879}, goog:processID: 7980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56879/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aeebc66103beec497f6ef57f8912c6a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4aeebc66103beec497f6ef57f8912c6a, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56879}, goog:processID: 7980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56879/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4aeebc66103beec497f6ef57f8912c6a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at page.AdminUserPage.isalertdisplayed(AdminUserPage.java:66)
+at testscript.AdminUserTestCase.addAdminuserInfo(AdminUserTestCase.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAdminuserInfo -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:35 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:45:35 IST" duration-ms="221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addAdminuserInfo status=SKIP method=AdminUserTestCase.addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:35 IST" name="initialiseBrowser" finished-at="2026-03-18T00:45:38 IST" duration-ms="2560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method retried="true" signature="addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:38 IST" name="addAdminuserInfo" description="Verify if the user is able to add and save admin user details" finished-at="2026-03-18T00:45:50 IST" duration-ms="11980" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ff5f7746a6abe114abfdc14b524015b8, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60280}, goog:processID: 14964, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60280/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ff5f7746a6abe114abfdc14b524015b8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ff5f7746a6abe114abfdc14b524015b8, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60280}, goog:processID: 14964, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60280/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ff5f7746a6abe114abfdc14b524015b8
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at page.AdminUserPage.isalertdisplayed(AdminUserPage.java:66)
+at testscript.AdminUserTestCase.addAdminuserInfo(AdminUserTestCase.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAdminuserInfo -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:50 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:45:50 IST" duration-ms="249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addAdminuserInfo status=SKIP method=AdminUserTestCase.addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:50 IST" name="initialiseBrowser" finished-at="2026-03-18T00:45:53 IST" duration-ms="2704" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:45:53 IST" name="addAdminuserInfo" description="Verify if the user is able to add and save admin user details" finished-at="2026-03-18T00:46:05 IST" duration-ms="11832" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5f77f34d43bf3dae645ae8ed4af893f, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60026}, goog:processID: 31084, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60026/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5f77f34d43bf3dae645ae8ed4af893f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c5f77f34d43bf3dae645ae8ed4af893f, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60026}, goog:processID: 31084, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60026/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5f77f34d43bf3dae645ae8ed4af893f
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at page.AdminUserPage.isalertdisplayed(AdminUserPage.java:66)
+at testscript.AdminUserTestCase.addAdminuserInfo(AdminUserTestCase.java:31)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAdminuserInfo -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AdminUserTestCase@9cb8225]" started-at="2026-03-18T00:46:05 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:46:05 IST" duration-ms="324" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addAdminuserInfo status=FAILURE method=AdminUserTestCase.addAdminuserInfo()[pri:0, instance:testscript.AdminUserTestCase@9cb8225] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.AdminUserTestCase -->
+      <class name="testscript.ManageCategoryTestcase">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:05 IST" name="initialiseBrowser" finished-at="2026-03-18T00:46:08 IST" duration-ms="2471" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method retried="true" signature="addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:08 IST" name="addCategory" description="Verify if the user is able to add and save new categories" finished-at="2026-03-18T00:46:19 IST" duration-ms="11822" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34f370d15949e5dfd98fb58c19fabfab, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61397}, goog:processID: 33856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61397/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34f370d15949e5dfd98fb58c19fabfab]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34f370d15949e5dfd98fb58c19fabfab, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61397}, goog:processID: 33856, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61397/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 34f370d15949e5dfd98fb58c19fabfab
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
 at page.ManageCategoryPage.isalertDisplayed(ManageCategoryPage.java:72)
-at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:27)
+at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:29)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -85,11 +491,299 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCategory -->
-        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTestcase@75d4a5c2]" started-at="2026-03-14T09:58:27 IST" name="browserQuitAndClose" finished-at="2026-03-14T09:58:27 IST" duration-ms="365" status="PASS">
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:19 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:46:20 IST" duration-ms="229" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addCategory status=FAILURE method=ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@75d4a5c2] output={null}]]]>
+                <![CDATA[[TestResult name=addCategory status=SKIP method=ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:20 IST" name="initialiseBrowser" finished-at="2026-03-18T00:46:22 IST" duration-ms="2566" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method retried="true" signature="addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:22 IST" name="addCategory" description="Verify if the user is able to add and save new categories" finished-at="2026-03-18T00:46:34 IST" duration-ms="11826" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [687269e00d8ecf59d795e4d04b5854c8, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56369}, goog:processID: 7340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56369/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 687269e00d8ecf59d795e4d04b5854c8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [687269e00d8ecf59d795e4d04b5854c8, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56369}, goog:processID: 7340, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56369/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 687269e00d8ecf59d795e4d04b5854c8
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at page.ManageCategoryPage.isalertDisplayed(ManageCategoryPage.java:72)
+at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCategory -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:34 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:46:34 IST" duration-ms="248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCategory status=SKIP method=ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:34 IST" name="initialiseBrowser" finished-at="2026-03-18T00:46:37 IST" duration-ms="2538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method retried="true" signature="addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:37 IST" name="addCategory" description="Verify if the user is able to add and save new categories" finished-at="2026-03-18T00:46:49 IST" duration-ms="11866" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a732ba2ef008ddb88007188e17099d2a, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55373}, goog:processID: 21440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55373/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a732ba2ef008ddb88007188e17099d2a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a732ba2ef008ddb88007188e17099d2a, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55373}, goog:processID: 21440, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55373/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a732ba2ef008ddb88007188e17099d2a
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at page.ManageCategoryPage.isalertDisplayed(ManageCategoryPage.java:72)
+at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCategory -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:49 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:46:49 IST" duration-ms="209" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCategory status=SKIP method=ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:49 IST" name="initialiseBrowser" finished-at="2026-03-18T00:46:51 IST" duration-ms="2566" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:46:51 IST" name="addCategory" description="Verify if the user is able to add and save new categories" finished-at="2026-03-18T00:47:03 IST" duration-ms="11764" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1c644d82eda493c44ed275ad7952b110, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64582}, goog:processID: 22404, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64582/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c644d82eda493c44ed275ad7952b110]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'alert-success')]"}
+  (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1c644d82eda493c44ed275ad7952b110, findElement {value=//div[contains(@class,'alert-success')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\Anvith\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64582}, goog:processID: 22404, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64582/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c644d82eda493c44ed275ad7952b110
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at page.ManageCategoryPage.isalertDisplayed(ManageCategoryPage.java:72)
+at testscript.ManageCategoryTestcase.addCategory(ManageCategoryTestcase.java:29)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCategory -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29]" started-at="2026-03-18T00:47:03 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:47:04 IST" duration-ms="332" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCategory status=FAILURE method=ManageCategoryTestcase.addCategory()[pri:0, instance:testscript.ManageCategoryTestcase@76b07f29] output={null}]]]>
               </value>
             </param>
           </params>
@@ -97,6 +791,250 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- browserQuitAndClose -->
       </class> <!-- testscript.ManageCategoryTestcase -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testscript.LogoutTestCase">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LogoutTestCase@5852c06f]" started-at="2026-03-18T00:44:54 IST" name="initialiseBrowser" finished-at="2026-03-18T00:44:57 IST" duration-ms="2614" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="performLogout()[pri:0, instance:testscript.LogoutTestCase@5852c06f]" started-at="2026-03-18T00:44:57 IST" name="performLogout" description="Verify if user is able to log out" finished-at="2026-03-18T00:44:58 IST" duration-ms="1106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performLogout -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LogoutTestCase@5852c06f]" started-at="2026-03-18T00:44:58 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:44:58 IST" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=performLogout status=SUCCESS method=LogoutTestCase.performLogout()[pri:0, instance:testscript.LogoutTestCase@5852c06f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.LogoutTestCase -->
+      <class name="testscript.LoginTestCase">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:35 IST" name="initialiseBrowser" finished-at="2026-03-18T00:44:39 IST" duration-ms="3362" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="login_validUsernameandcredentials()[pri:1, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:39 IST" name="login_validUsernameandcredentials" description="Verify login functionaility" finished-at="2026-03-18T00:44:40 IST" duration-ms="1640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_validUsernameandcredentials -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:40 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:44:40 IST" duration-ms="221" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_validUsernameandcredentials status=SUCCESS method=LoginTestCase.login_validUsernameandcredentials()[pri:1, instance:testscript.LoginTestCase@4ee203eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:40 IST" name="initialiseBrowser" finished-at="2026-03-18T00:44:43 IST" duration-ms="2743" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="login_validusernameAndInvalidpassword()[pri:2, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:43 IST" name="login_validusernameAndInvalidpassword" description="Verify login with valid username and invalid password" finished-at="2026-03-18T00:44:44 IST" duration-ms="616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_validusernameAndInvalidpassword -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:44 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:44:44 IST" duration-ms="209" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_validusernameAndInvalidpassword status=SUCCESS method=LoginTestCase.login_validusernameAndInvalidpassword()[pri:2, instance:testscript.LoginTestCase@4ee203eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:44 IST" name="initialiseBrowser" finished-at="2026-03-18T00:44:47 IST" duration-ms="2724" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="login_invalidusernameAndValidpassword()[pri:3, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:47 IST" name="login_invalidusernameAndValidpassword" description="Verify login with invalid username and valid password" finished-at="2026-03-18T00:44:47 IST" duration-ms="590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_invalidusernameAndValidpassword -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:47 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:44:47 IST" duration-ms="198" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_invalidusernameAndValidpassword status=SUCCESS method=LoginTestCase.login_invalidusernameAndValidpassword()[pri:3, instance:testscript.LoginTestCase@4ee203eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:47 IST" name="initialiseBrowser" finished-at="2026-03-18T00:44:50 IST" duration-ms="3002" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="login_incorrectusernameAndpassword()[pri:4, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:50 IST" name="login_incorrectusernameAndpassword" description="Verify login with invalid username and password" finished-at="2026-03-18T00:44:51 IST" duration-ms="595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_incorrectusernameAndpassword -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:51 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:44:51 IST" duration-ms="218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_incorrectusernameAndpassword status=SUCCESS method=LoginTestCase.login_incorrectusernameAndpassword()[pri:4, instance:testscript.LoginTestCase@4ee203eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:51 IST" name="initialiseBrowser" finished-at="2026-03-18T00:44:54 IST" duration-ms="2544" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="login_emptyUsernameAndPassword()[pri:5, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:54 IST" name="login_emptyUsernameAndPassword" description="Verify login with empty username and password" finished-at="2026-03-18T00:44:54 IST" duration-ms="413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_emptyUsernameAndPassword -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.LoginTestCase@4ee203eb]" started-at="2026-03-18T00:44:54 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:44:54 IST" duration-ms="201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login_emptyUsernameAndPassword status=SUCCESS method=LoginTestCase.login_emptyUsernameAndPassword()[pri:5, instance:testscript.LoginTestCase@4ee203eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.LoginTestCase -->
+      <class name="testscript.ManageFooterTestCase">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.ManageFooterTestCase@38af9828]" started-at="2026-03-18T00:47:04 IST" name="initialiseBrowser" finished-at="2026-03-18T00:47:06 IST" duration-ms="2583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="updateFooterinformations()[pri:0, instance:testscript.ManageFooterTestCase@38af9828]" started-at="2026-03-18T00:47:06 IST" name="updateFooterinformations" description="Verify if user is able to update footer informations" finished-at="2026-03-18T00:47:08 IST" duration-ms="1830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateFooterinformations -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.ManageFooterTestCase@38af9828]" started-at="2026-03-18T00:47:08 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:47:08 IST" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=updateFooterinformations status=SUCCESS method=ManageFooterTestCase.updateFooterinformations()[pri:0, instance:testscript.ManageFooterTestCase@38af9828] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.ManageFooterTestCase -->
+      <class name="testscript.MananageContactsTestCase">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.MananageContactsTestCase@376a0d86]" started-at="2026-03-18T00:47:08 IST" name="initialiseBrowser" finished-at="2026-03-18T00:47:11 IST" duration-ms="2544" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="updateContactinfo()[pri:0, instance:testscript.MananageContactsTestCase@376a0d86]" started-at="2026-03-18T00:47:11 IST" name="updateContactinfo" description="verify if user is able to update contacts" finished-at="2026-03-18T00:47:13 IST" duration-ms="2665" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateContactinfo -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.MananageContactsTestCase@376a0d86]" started-at="2026-03-18T00:47:13 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:47:14 IST" duration-ms="210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=updateContactinfo status=SUCCESS method=MananageContactsTestCase.updateContactinfo()[pri:0, instance:testscript.MananageContactsTestCase@376a0d86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.MananageContactsTestCase -->
+      <class name="testscript.AddNewsTestCase">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.AddNewsTestCase@4149c063]" started-at="2026-03-18T00:44:58 IST" name="initialiseBrowser" finished-at="2026-03-18T00:45:01 IST" duration-ms="2965" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="addNews()[pri:0, instance:testscript.AddNewsTestCase@4149c063]" started-at="2026-03-18T00:45:01 IST" name="addNews" description="Verify if the user is able to add news and save" finished-at="2026-03-18T00:45:04 IST" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNews -->
+        <test-method is-config="true" signature="browserQuitAndClose(org.testng.ITestResult)[pri:0, instance:testscript.AddNewsTestCase@4149c063]" started-at="2026-03-18T00:45:04 IST" name="browserQuitAndClose" finished-at="2026-03-18T00:45:04 IST" duration-ms="263" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addNews status=SUCCESS method=AddNewsTestCase.addNews()[pri:0, instance:testscript.AddNewsTestCase@4149c063] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserQuitAndClose -->
+      </class> <!-- testscript.AddNewsTestCase -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
