@@ -13,13 +13,13 @@ public class ExtentReportUtility {
             ExtentSparkReporter sparkReporter =
                     new ExtentSparkReporter("./extent-reports/extent-report.html");
 
-            sparkReporter.config().setReportName("7RMart Automation Report");
+            sparkReporter.config().setReportName("GroceryappTestin Automation Report");
             sparkReporter.config().setDocumentTitle("Test Execution Report");
 
             extent = new ExtentReports();
             extent.attachReporter(sparkReporter);
 
-            extent.setSystemInfo("Project", "7RMart");
+            extent.setSystemInfo("Project", "GroceryappTesting");
             extent.setSystemInfo("Tester", "Amrita");
             extent.setSystemInfo("Environment", "QA");
         }

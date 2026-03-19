@@ -12,6 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import constant.Constant;
@@ -22,10 +23,9 @@ public class Base {
     public WebDriver driver;
     public Properties properties;
     public FileInputStream fileInputStream;
-
+    @BeforeMethod
     @Parameters("browser")
-    @BeforeMethod(alwaysRun = true)
-    public void initialiseBrowser(String browser) throws Exception {
+    public void initialiseBrowser(@Optional("chrome") String browser)  throws Exception {
     	try {
     		properties=new Properties();
     		fileInputStream=new FileInputStream(Constant.CONFIGFILE);
