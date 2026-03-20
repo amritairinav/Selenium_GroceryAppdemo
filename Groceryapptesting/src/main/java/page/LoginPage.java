@@ -27,20 +27,24 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void enterTheusername(String Username) {
+	public LoginPage enterTheusername(String Username) {
 		username.sendKeys(Username);
+		return this;
 	}
 
-	public void enterThepassword(String Password) {
+	public LoginPage enterThepassword(String Password) {
 		password.sendKeys(Password);
+		return this;
 	}
 
-	public void checkthCheckboxrememberme() {
+	public LoginPage checkthCheckboxrememberme() {
 		rememberme.click();
+		return this;
 	}
 
-	public void clickSignin() {
+	public HomePage clickSignin() {
 		submit.click();
+		return new HomePage(driver);
 	}
 
 	public boolean isdashBoarddisplayed() {

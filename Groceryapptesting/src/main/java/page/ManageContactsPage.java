@@ -2,7 +2,6 @@ package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,8 +9,7 @@ import utility.PageUtility;
 import utility.Waitutility;
 
 public class ManageContactsPage {
-	@FindBy(xpath = "//a[contains(@href,'list-contact') and @class='small-box-footer']")
-	WebElement moreinfo;
+
 	@FindBy(xpath = "//a[@class='btn btn-sm btn btn-primary btncss']")
 	WebElement editbutton;
 	@FindBy(xpath = "//input[@id='phone']")
@@ -38,48 +36,51 @@ public class ManageContactsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void moreinfo() {
-		moreinfo.click();
-	}
-
-	public void editButton() {
+		public ManageContactsPage editButton() {
 		editbutton.click();
+		return this;
 	}
 
-	public void updatePhone(String Phone) {
+	public ManageContactsPage updatePhone(String Phone) {
 		phone.clear();
 		phone.sendKeys(Phone);
+		return this;
 
 	}
 
-	public void updateEmail(String Email) {
+	public ManageContactsPage updateEmail(String Email) {
 		email.clear();
 		email.sendKeys(Email);
+		return this;
 
 	}
 
-	public void updateAddress(String Address) {
+	public ManageContactsPage updateAddress(String Address) {
 		address.clear();
 		address.sendKeys(Address);
+		return this;
 
 	}
 
-	public void deliveryTime(String Time) {
+	public ManageContactsPage deliveryTime(String Time) {
 		deliverytime.clear();
 		deliverytime.sendKeys(Time);
+		return this;
 
 	}
 
-	public void deliveryLimit(String Limit) {
+	public ManageContactsPage deliveryLimit(String Limit) {
 		deliverylimit.clear();
 		deliverylimit.sendKeys(Limit);
+		return this;
 
 	}
 
-	public void updatebutton() {
+	public ManageContactsPage updatebutton() {
 		page.movetoElement(driver, updatebutton);
 		wait.waitForElementToBeClickable(driver, updatebutton);
-	    page.actionClick(driver, updatebutton);
+		page.actionClick(driver, updatebutton);
+		return this;
 	}
 
 	public boolean isalertDisplayed() {

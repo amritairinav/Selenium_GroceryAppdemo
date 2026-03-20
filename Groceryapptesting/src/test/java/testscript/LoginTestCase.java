@@ -6,10 +6,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import constant.Constant;
+import page.HomePage;
 import page.LoginPage;
 import utility.ExcelUtility;
 
 public class LoginTestCase extends Base {
+
+	public HomePage homepage;
 
 	@Test(priority = 1, description = "Verify login functionaility", groups = {
 			"Regression" }, retryAnalyzer = retry.Retry.class)
@@ -18,10 +21,8 @@ public class LoginTestCase extends Base {
 		String username = ExcelUtility.getStringdata(1, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterTheusername(username);
-		loginpage.enterThepassword(password);
-		loginpage.checkthCheckboxrememberme();
-		loginpage.clickSignin();
+		loginpage.enterTheusername(username).enterThepassword(password).checkthCheckboxrememberme();
+		homepage = loginpage.clickSignin();
 		boolean page = loginpage.isdashBoarddisplayed();
 		Assert.assertTrue(page);
 	}
@@ -32,10 +33,8 @@ public class LoginTestCase extends Base {
 		String username = ExcelUtility.getStringdata(2, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(2, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterTheusername(username);
-		loginpage.enterThepassword(password);
-		loginpage.checkthCheckboxrememberme();
-		loginpage.clickSignin();
+		loginpage.enterTheusername(username).enterThepassword(password).checkthCheckboxrememberme();
+		homepage = loginpage.clickSignin();
 		boolean message = loginpage.isalertdisplayed();
 		Assert.assertTrue(message, Constant.LOGIN_WITH_INCORRECTPASSWORD);
 	}
@@ -47,10 +46,8 @@ public class LoginTestCase extends Base {
 		String username = ExcelUtility.getStringdata(3, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(3, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterTheusername(username);
-		loginpage.enterThepassword(password);
-		loginpage.checkthCheckboxrememberme();
-		loginpage.clickSignin();
+		loginpage.enterTheusername(username).enterThepassword(password).checkthCheckboxrememberme();
+		homepage = loginpage.clickSignin();
 		boolean message = loginpage.isalertdisplayed();
 		Assert.assertTrue(message, Constant.LOGIN_WITH_INCORRECTPASSWORD);
 	}
@@ -62,10 +59,8 @@ public class LoginTestCase extends Base {
 		String username = ExcelUtility.getStringdata(4, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(4, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterTheusername(username);
-		loginpage.enterThepassword(password);
-		loginpage.checkthCheckboxrememberme();
-		loginpage.clickSignin();
+		loginpage.enterTheusername(username).enterThepassword(password).checkthCheckboxrememberme();
+		homepage = loginpage.clickSignin();
 		boolean message = loginpage.isalertdisplayed();
 		Assert.assertTrue(message, Constant.LOGIN_WITH_INCORRECTPASSWORD);
 	}
@@ -76,10 +71,8 @@ public class LoginTestCase extends Base {
 		String username = ExcelUtility.getStringdata(5, 0, "LoginPage");
 		String password = ExcelUtility.getStringdata(5, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterTheusername(username);
-		loginpage.enterThepassword(password);
-		loginpage.checkthCheckboxrememberme();
-		loginpage.clickSignin();
+		loginpage.enterTheusername(username).enterThepassword(password).checkthCheckboxrememberme();
+		homepage = loginpage.clickSignin();
 		Assert.assertEquals(Constant.LOGIN_EMPTY_FIELD_MESSAGE_ACTUAL, Constant.LOGIN_EMPTY_FIELD_MESSAGE_EXPECTED);
 	}
 }

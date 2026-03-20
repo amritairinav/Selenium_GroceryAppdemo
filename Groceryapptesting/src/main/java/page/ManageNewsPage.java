@@ -6,9 +6,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
-
-	@FindBy(xpath = "//p[text()='Manage News']/parent::div/parent::div//a")
-	WebElement moreinfo;
 	@FindBy(css = "a[onclick='click_button(1)']")
 	WebElement newbutton;
 	@FindBy(xpath = "//textarea[@id='news']")
@@ -25,21 +22,20 @@ public class ManageNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void moreinfo() {
-		moreinfo.click();
-	}
-
-	public void newbutton() {
+		public ManageNewsPage newbutton() {
 		newbutton.click();
+		return this;
 	}
 
-	public void newsTextarea(String newstextarea1) {
+	public ManageNewsPage newsTextarea(String newstextarea1) {
 		newstextarea.sendKeys(newstextarea1);
+		return this;
 
 	}
 
-	public void savebutton() {
+	public ManageNewsPage savebutton() {
 		savebutton.click();
+		return this;
 	}
 
 	public boolean isalertdisplayed() {

@@ -9,7 +9,7 @@
 		<classes>
 			<class name="testscript.LoginTestCase" />
 			<class name="testscript.LogoutTestCase" />
-			<class name="testscript.AddNewsTestCase" />
+			<class name="testscript.ManageNewsTestCase" />
 			<class name="testscript.AdminUserTestCase" />
 			<class name="testscript.ManageCategoryTestcase" />
 			<class name="testscript.ManageFooterTestCase" />

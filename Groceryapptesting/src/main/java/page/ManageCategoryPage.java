@@ -13,8 +13,6 @@ import utility.Waitutility;
 
 public class ManageCategoryPage {
 
-	@FindBy(xpath = "//a[contains(@href,'list-category') and @class='small-box-footer']")
-	WebElement moreinfo;
 	@FindBy(css = "a[onclick='click_button(1)']")
 	WebElement newbutton;
 	@FindBy(css = "input#category")
@@ -37,35 +35,37 @@ public class ManageCategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void moreinfo() {
-		moreinfo.click();
-	}
 
-	public void newButton() {
+	public ManageCategoryPage newButton() {
 		newbutton.click();
+		return this;
 	}
 
-	public void enterCategory(String category) {
+	public ManageCategoryPage enterCategory(String category) {
 
 		categories.sendKeys(category);
+		return this;
 	}
 
-	public void clickList() {
+	public ManageCategoryPage clickList() {
 
 		list.click();
+		return this;
 	}
 
-	public void uploadAdminImage() {
+	public ManageCategoryPage uploadAdminImage() {
 
 		FileUpload upload = new FileUpload();
 		upload.uploadFile(uploadimage, Constant.IMAGEFILE);
+		return this;
 	}
 
-	public void saveButton() {
+	public ManageCategoryPage saveButton() {
 		page.movetoElement(driver, savebutton);
 		wait.waitForElementToBeClickable(driver, savebutton);
-		page.actionClick(driver, savebutton); 
-				
+		page.actionClick(driver, savebutton);
+		return this;
+
 	}
 
 	public boolean isalertDisplayed() {

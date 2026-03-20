@@ -7,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ManageFooterPage {
 
-	@FindBy(xpath = "//p[text()='Manage Footer Text']/parent::div/parent::div/a")
-	WebElement moreinfo;
 	@FindBy(xpath = "(//i[contains(@class,'fa-edit')])[1]")
 	WebElement editbutton;
 	@FindBy(xpath = "//textarea[@placeholder='Enter the Address']")
@@ -29,34 +27,35 @@ public class ManageFooterPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void moreinfo() {
-		moreinfo.click();
-	}
-
-	public void editButton() {
+	public ManageFooterPage editButton() {
 		editbutton.click();
+		return this;
 	}
 
-	public void updateAddress(String Address) {
+	public ManageFooterPage updateAddress(String Address) {
 		address.clear();
 		address.sendKeys(Address);
+		return this;
 
 	}
 
-	public void updateEmail(String Email) {
+	public ManageFooterPage updateEmail(String Email) {
 		email.clear();
 		email.sendKeys(Email);
+		return this;
 
 	}
 
-	public void updatePhone(String Phone) {
+	public ManageFooterPage updatePhone(String Phone) {
 		phone.clear();
 		phone.sendKeys(Phone);
+		return this;
 
 	}
 
-	public void updatebutton() {
+	public ManageFooterPage updatebutton() {
 		updatebutton.click();
+		return this;
 
 	}
 

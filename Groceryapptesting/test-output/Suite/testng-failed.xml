@@ -14,13 +14,13 @@
           <include name="initialiseBrowser"/>
         </methods>
       </class> <!-- testscript.AdminUserTestCase -->
-      <class name="testscript.ManageCategoryTestcase">
+      <class name="testscript.LoginTestCase">
         <methods>
           <include name="browserQuitAndClose"/>
           <include name="initialiseBrowser"/>
-          <include name="addCategory"/>
+          <include name="login_validUsernameandcredentials"/>
         </methods>
-      </class> <!-- testscript.ManageCategoryTestcase -->
+      </class> <!-- testscript.LoginTestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

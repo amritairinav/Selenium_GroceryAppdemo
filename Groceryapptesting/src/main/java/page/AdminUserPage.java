@@ -10,8 +10,6 @@ import utility.Waitutility;
 
 public class AdminUserPage {
 
-	@FindBy(xpath = "(//a[contains(@class,'small-box-footer')])[1]")
-	WebElement moreinfo;
 	@FindBy(css = "a[onclick='click_button(1)']")
 	WebElement newbutton;
 	@FindBy(xpath = "//input[@id='username']")
@@ -34,32 +32,32 @@ public class AdminUserPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void moreinfo() {
-		wait.waitForElementToBeClickable(driver, moreinfo);
-		moreinfo.click();
-	}
-
-	public void newbutton() {
+	public AdminUserPage newbutton() {
 		wait.waitForElementToBeClickable(driver, newbutton);
 		newbutton.click();
+		return this;
 	}
 
-	public void enterUsername(String Username) {
+	public AdminUserPage enterUsername(String Username) {
 		wait.waitForElementToBeClickable(driver, username);
 		username.sendKeys(Username);
+		return this;
 	}
 
-	public void enterPassword(String Password) {
+	public AdminUserPage enterPassword(String Password) {
 		wait.waitForElementToBeClickable(driver, password);
 		password.sendKeys(Password);
+		return this;
 	}
 
-	public void dropdown(String Dropdown) {
+	public AdminUserPage dropdown(String Dropdown) {
 		page.dropdownVisibleText(dropdown, Dropdown);
+		return this;
 	}
 
-	public void savebutton() {
+	public AdminUserPage savebutton() {
 		savebutton.click();
+		return this;
 	}
 
 	public boolean isalertdisplayed() {
